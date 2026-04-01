@@ -1,48 +1,62 @@
 
+***
+
 # MakerGhat Voice Analytics Engine (V1.0)
 **Automated Pedagogical Engagement Analysis for STEM Classrooms**
 
 ## 📌 Project Overview
-This repository contains a full-stack analytical dashboard designed to quantify classroom engagement using AI-driven voice processing. [cite_start]The system analyzes Hindi-English (Hinglish) classroom audio to derive metrics like Teacher-Student talk-time ratios, questioning frequency, and overall dialogue intensity[cite: 13, 26].
+This repository contains a functional MVP designed to convert classroom audio recordings into actionable pedagogical insights. The system processes Hindi-English (Hinglish) audio to measure student engagement, teacher dominance, and overall classroom interaction dynamics.
+
+**Live Demo:** https://makerghat-voice-analytics.vercel.app/
 
 ## 🛠️ The Tech Stack
-* [cite_start]**Transcription Pipeline:** OpenAI WhisperX (Large-V3) with Phoneme Alignment & Speaker Diarization[cite: 85].
-* **Infrastructure:** Cloud-based GPU processing (A100/T4) for high-speed ASR (Automatic Speech Recognition).
-* [cite_start]**Frontend:** React.js (Vite) + Pure CSS3 for high-performance, zero-latency data visualization[cite: 53].
-* **Analytics:** Recharts for time-series activity mapping.
+* **Transcription Pipeline:** OpenAI WhisperX (Large-V3) for robust Indic language support.
+* **Acoustic Processing:** Phoneme Alignment & Speaker Diarization for precise time-stamping.
+* **Frontend:** React.js (Vite) for a zero-latency, responsive dashboard.
+* **Data Visualization:** Recharts for time-series engagement mapping.
 
 ## 📊 Engagement Metrics & Logic
-[cite_start]To fulfill the core analysis requirements[cite: 28, 40], the following metrics are calculated using automated heuristics:
+The system utilizes automated heuristics and keyword-based rules to derive session metrics. The following formal metrics have been defined:
 
-### 1. Teacher Dominance Ratio (TDR)
-* **Formula:** $$TDR = \left( \frac{\text{Teacher Talk-Time (seconds)}}{\text{Total Session Duration (seconds)}} \right) \times 100$$
-* [cite_start]**Logic:** Quantifies the percentage of the session where the instructor is the primary speaker[cite: 42]. A high TDR typically indicates a lecture-heavy pedagogical style, while a lower ratio suggests more space for student voice.
+### 1. Teacher Dominance Ratio ($TDR$)
+The $TDR$ identifies the proportion of the session where the instructor is the primary verbal actor.
+$$TDR = \left( \frac{ \sum_{i=1}^{n} \Delta t_{T, i} }{ \Delta T_{total} } \right) \times 100\%$$
+* **Where**: $\Delta t_{T, i}$ represents the duration of individual teacher speech segments.
+* **Logic**: High ratios indicate lecture-centric delivery, while lower values suggest an inquiry-based environment.
 
-### 2. Student Participation Indicator (SPI)
-* **Formula:** $$SPI = \frac{\text{Total Student Responses}}{\text{Total Number of Students}}$$
-* [cite_start]**Logic:** Measures the average frequency of engagement per student[cite: 43]. This normalizes the interaction count relative to the class size, providing a clearer picture of individual involvement.
+### 2. Student Participation Indicator ($SPI$)
+The $SPI$ normalizes student vocal engagement against the total cohort size.
+$$SPI = \frac{ \sum R_{student} }{ N_{students} }$$
+* **Where**: $R_{student}$ is the total count of student responses and $N_{students}$ is the total student population.
+* **Logic**: Provides a density-independent measure of how frequently the average student contributes.
 
-### 3. Interaction Count (IC)
-* **Formula:** $$IC = \sum (\text{Teacher Questions} + \text{Student Responses})$$
-* [cite_start]**Logic:** Tracks the total number of verbal "hand-offs" between the instructor and learners[cite: 44]. High interaction counts correlate with active-learning environments common in STEM workshops.
+### 3. Interaction Count ($IC$)
+The $IC$ quantifies the total number of bidirectional verbal exchanges.
+$$IC = \mathcal{Q}_{teacher} + \mathcal{R}_{student}$$
+* **Where**: $\mathcal{Q}_{teacher}$ is the count of instructor-led questions and $\mathcal{R}_{student}$ is the count of student responses.
+* **Logic**: Acts as a proxy for the "dialogic loop" in active-learning environments.
 
-## 🧠 Assumptions & Limitations
-[cite_start]As this is a prototype demo[cite: 16, 82], the following factors should be considered:
-* [cite_start]**Transcription Accuracy:** Approximate accuracy is accepted as per project guidelines[cite: 26]. [cite_start]Hindi transcription quality may vary based on ambient classroom noise and the use of colloquial "Hinglish"[cite: 75].
-* [cite_start]**Speaker Classification:** Teacher vs. Student speech is determined using a combination of segment duration heuristics and lexical keyword matching (e.g., detecting honorifics like "Sir" or "Ma'am")[cite: 31, 37].
-* [cite_start]**Hardware Constraints:** The current pipeline assumes batch processing via GPU; real-time edge deployment is a future roadmap item[cite: 8].
+## 🧠 Approach & Methodology
+To handle the unique challenges of Indian classrooms, the following approach was taken:
+1.  **Diarization Heuristics**: Segments were classified based on duration and lexical markers (e.g., detecting honorifics like "Sir" or "Ma'am").
+2.  **Indic Language Support**: Optimized WhisperX for Hinglish to ensure approximate accuracy across diverse dialects.
+3.  **Data Bucketing**: Implemented 1-minute time-series resolution to maintain dashboard performance during long sessions.
 
 ## 📂 Project Structure
 ```text
-[cite_start]├── data/               # Raw and processed JSON transcripts + Metadata [cite: 17]
-[cite_start]├── notebooks/          # GPU Transcription Pipeline (Jupyter Notebooks) [cite: 54]
-[cite_start]├── src/                # React Dashboard Source Code [cite: 49]
+├── data/               # Processed JSON transcripts and session metadata
+├── notebooks/          # ML Pipeline (WhisperX Inference & Processing)
+├── src/                # React Dashboard Source Code (Vite-based)
 ├── app.py              # Data Processing Utilities
 └── requirements.txt    # ML Environment Dependencies
 ```
 
+## ⚠️ Assumptions & Limitations
+* **Accuracy**: As per assignment guidelines, approximate transcription accuracy is accepted.
+* **Noise Profiles**: Background noise in classrooms may occasionally impact diarization reliability.
+* **Heuristics**: Speaker classification relies on segment length and keyword matching, which may vary across different instruction styles.
+
 ---
 **Developed by Simran** *Electrical Engineering Student @ SVNIT Surat*
 
----
-
+***
