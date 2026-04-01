@@ -1,0 +1,11 @@
+# --- Transcription & ML Pipeline ---
+whisperx==3.1.1
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.27.4
+pyannote.audio>=3.0.0
+
+# --- Dashboard & Utilities ---
+pandas>=2.0.0
+numpy>=1.24.0
+python-dotenv>=1.0.0

@@ -1,0 +1,15 @@
+{
+  "activityType": "Shadow Art",
+  "boys": 17,
+  "duration": 3430634,
+  "girls": 10,
+  "photoMetadata": {
+    "capturedAt": "2026-01-12 15:20:50",
+    "photoPath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11166_2026-01-12-142132/OD11166_2026-01-12-142132.jpg",
+    "teacherName": "Sudipto"
+  },
+  "recordingFilePath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11166_2026-01-12-142132/OD11166_2026-01-12-142132.mp3",
+  "teacherId": "OD11166",
+  "timestamp": "2026-01-12 15:20:50",
+  "totalStudents": 27
+}

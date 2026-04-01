@@ -1,0 +1,18 @@
+{
+  "activityType": "Trumpet",
+  "boys": 15,
+  "duration": 4062420,
+  "girls": 7,
+  "photoMetadata": {
+    "address": "Shop No 1 Igatpuri Giranare, Igatpuri, Maharashtra, India",
+    "capturedAt": "2025-12-23 12:13:06",
+    "latitude": 19.6962197,
+    "longitude": 73.5798404,
+    "photoPath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11163_2025-12-23-121239/OD11163_2025-12-23-121239.jpg",
+    "teacherName": "Santana"
+  },
+  "recordingFilePath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11163_2025-12-23-121239/OD11163_2025-12-23-121239.mp3",
+  "teacherId": "OD11163",
+  "timestamp": "2025-12-23 13:21:25",
+  "totalStudents": 22
+}
