@@ -1,0 +1,15 @@
+{
+  "activityType": "Wind Anemometer",
+  "boys": 9,
+  "duration": 3612204,
+  "girls": 10,
+  "photoMetadata": {
+    "capturedAt": "2026-01-20 12:56:38",
+    "photoPath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11166_2026-01-20-115538/OD11166_2026-01-20-115538.jpg",
+    "teacherName": "Sudipto"
+  },
+  "recordingFilePath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11166_2026-01-20-115538/OD11166_2026-01-20-115538.mp3",
+  "teacherId": "OD11166",
+  "timestamp": "2026-01-20 12:56:38",
+  "totalStudents": 19
+}

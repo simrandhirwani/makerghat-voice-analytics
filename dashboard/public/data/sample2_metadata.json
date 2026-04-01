@@ -1,0 +1,18 @@
+{
+  "activityType": "Trumpet",
+  "boys": 13,
+  "duration": 3838906,
+  "girls": 12,
+  "photoMetadata": {
+    "address": "MHVM+XFH, Igatpuri, Maharashtra, India",
+    "capturedAt": "2026-01-28 12:19:42",
+    "latitude": 19.6949309,
+    "longitude": 73.5838105,
+    "photoPath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11163_2026-01-28-121933/OD11163_2026-01-28-121933.jpg",
+    "teacherName": "Santana"
+  },
+  "recordingFilePath": "/storage/emulated/0/Android/data/com.example.mneapplication/files/sessions/OD11163_2026-01-28-121933/OD11163_2026-01-28-121933.mp3",
+  "teacherId": "OD11163",
+  "timestamp": "2026-01-28 13:24:01",
+  "totalStudents": 25
+}
