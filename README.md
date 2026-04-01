@@ -31,9 +31,8 @@ $$SPI = \frac{ \sum R_{student} }{ N_{students} }$$
 * **Logic**: Provides a density-independent measure of how frequently the average student contributes.
 
 ### 3. Interaction Count ($IC$)
-The $IC$ quantifies the total number of bidirectional verbal exchanges.
-$$IC = \mathcal{Q}_{teacher} + \mathcal{R}_{student}$$
-* **Where**: $\mathcal{Q}_{teacher}$ is the count of instructor-led questions and $\mathcal{R}_{student}$ is the count of student responses.
+The IC quantifies the total number of bidirectional verbal exchanges.
+$$IC = \sum (\text{Teacher Questions} + \text{Student Responses})$$
 * **Logic**: Acts as a proxy for the "dialogic loop" in active-learning environments.
 
 ## 🧠 Approach & Methodology
